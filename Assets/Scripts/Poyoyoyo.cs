@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Sockets;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.UIElements;
 using static UnityEngine.UI.GridLayoutGroup;
 
 public class Poyoyoyo : MonoBehaviour
@@ -27,6 +29,8 @@ public class Poyoyoyo : MonoBehaviour
     private Vector3 _agentDestination;
     private bool _agentHadPath;
 
+    private bool _splashing;
+    private bool _unSplashing;
 
     private void Awake()
     {
@@ -48,7 +52,7 @@ public class Poyoyoyo : MonoBehaviour
                     _agentHadPath = _agent.hasPath;
                     _agentDestination = _agent.destination;
                     _agent.enabled = false;
-                    _rb.AddForce(Vector3.up * Random.Range(3, 8), ForceMode.Impulse);
+                    _rb.AddForce(Vector3.up * Random.Range(4, 9), ForceMode.Impulse);
                 }
             }
         }
@@ -77,6 +81,11 @@ public class Poyoyoyo : MonoBehaviour
             _currentTime = 0;
         }
 
+        if (_rb.velocity.y != 0)
+        {
+            float yScale = Mathf.Lerp(1, 2f, Mathf.Abs(_rb.velocity.y) / 8);
+            transform.localScale = new Vector3(1 / yScale, yScale, 1);
+        }
     }
 
     private void FixedUpdate()
@@ -138,7 +147,7 @@ public class Poyoyoyo : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-       if (collision.transform.TryGetComponent(out Poyoyoyo comp) && _previousVelocity.y < 0)
+        if (collision.transform.TryGetComponent(out Poyoyoyo comp) && _previousVelocity.y < 0)
         {
             _rb.AddForce(Random.insideUnitSphere * 2 + transform.up * 2, ForceMode.Impulse);
         }
@@ -147,6 +156,10 @@ public class Poyoyoyo : MonoBehaviour
             _agent.enabled = true;
             if (_agentHadPath && _agent.isOnNavMesh)
                 _agent.destination = _agentDestination;
+
+            if (_previousVelocity.y < -.5f) ;
+            StartCoroutine(Splash());
+
         }
 
         if (Catch && (collision.gameObject.layer == 13))
@@ -195,5 +208,53 @@ public class Poyoyoyo : MonoBehaviour
         }
         StartCoroutine(RenableCollision());
 
+    }
+
+    IEnumerator Splash()
+    {
+        if (_splashing)
+            yield return null;
+        float current = 0;
+        float duration = Random.Range(0.15f, .4f);
+        float x_splash = Random.Range(1.4f, 2.8f);
+        float z_splash = Random.Range(1.4f, 2.8f);
+        Vector3 begin = transform.localScale;
+
+        while (true)
+        {
+            transform.localScale = Vector3.Lerp(begin, new Vector3(x_splash, 0, z_splash), current / duration);
+            current += Time.deltaTime;
+            if (current > duration)
+            {
+                StartCoroutine(UnSplash());
+                break;
+            }
+
+            _splashing = true;
+            yield return null;
+        }
+        _splashing = false;
+        yield return null;
+    }
+
+    IEnumerator UnSplash()
+    {
+        if (_unSplashing)
+            yield return null;
+        float current = 0;
+        float duration = Random.Range(0.25f, .45f);
+
+        Vector3 begin = transform.localScale;
+        while (true)
+        {
+            transform.localScale = Vector3.Lerp(begin, Vector3.one, current / duration);
+            current += Time.deltaTime;
+            if (current > duration)
+                break;
+            _unSplashing = true;
+            yield return null;
+        }
+        _unSplashing = false;
+        yield return null;
     }
 }
