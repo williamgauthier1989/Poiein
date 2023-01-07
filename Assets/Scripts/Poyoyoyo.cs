@@ -9,7 +9,6 @@ using static UnityEngine.UI.GridLayoutGroup;
 
 public class Poyoyoyo : MonoBehaviour
 {
-    private Outline _outline;
     private Rigidbody _rb;
     private NavMeshAgent _agent;
 
@@ -32,7 +31,6 @@ public class Poyoyoyo : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
-        _outline = GetComponent<Outline>();
         _agent = GetComponent<NavMeshAgent>();
     }
 
@@ -88,11 +86,9 @@ public class Poyoyoyo : MonoBehaviour
 
     public void OnArmIn()
     {
-        _outline.OutlineWidth = 8;
     }
     public void OnArmOut()
     {
-        _outline.OutlineWidth = 0;
     }
     public void OnGrabIn(Transform owner)
     {
@@ -142,6 +138,10 @@ public class Poyoyoyo : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+       if (collision.transform.TryGetComponent(out Poyoyoyo comp) && _previousVelocity.y < 0)
+        {
+            _rb.AddForce(Random.insideUnitSphere * 2 + transform.up * 2, ForceMode.Impulse);
+        }
         if (!Catch && collision.transform.CompareTag("Neutre") && _previousVelocity.y < 0)
         {
             _agent.enabled = true;

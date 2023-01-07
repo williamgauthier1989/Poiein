@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 2786339280747583123}
   - component: {fileID: 7973549150450842643}
   - component: {fileID: 1832645796427794900}
-  - component: {fileID: 6211299768396717392}
   m_Layer: 7
   m_Name: SOIL
   m_TagString: Untagged
@@ -176,23 +175,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.65, y: 1.65, z: 1.65}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6211299768396717392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8592164128266435083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 0.8113208, g: 0, b: 0, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
+  m_Size: {x: 1.5, y: 1.65, z: 1.5}
+  m_Center: {x: 0, y: 0.08, z: 0}

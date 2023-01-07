@@ -53,9 +53,8 @@ public class PlayerHand : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask))
         {
             transform.position = Vector3.SmoothDamp(transform.position, hit.point + Vector3.up * 2.5f, ref MoveVelocity, SmoothTime);
-            if (hit.transform.gameObject.layer == 7 && hit.transform.TryGetComponent<Poyoyoyo>(out Poyoyoyo c) && !has_one)
+            if (hit.transform.gameObject.layer == 7 && hit.transform.TryGetComponent(out Poyoyoyo c) && !has_one)
             {
-                Debug.Log("!!!");
                 Highlighted = c;
                 Highlighted.OnArmIn();
             } else if (!has_one)
