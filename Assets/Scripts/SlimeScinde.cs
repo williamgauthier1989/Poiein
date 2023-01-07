@@ -7,6 +7,17 @@ using UnityEngine.AI;
 public class SlimeScinde : MonoBehaviour
 {
     [SerializeField] private int _niveau = 2;
+    public int Niveau
+    {
+        get
+        {
+            return _niveau;
+        }
+        set
+        {
+            _niveau = value;
+        }
+    }
     private bool _hasExploded = false;
     public GameObject Child;
 

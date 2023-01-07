@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 7819947113660303699}
   - component: {fileID: 7819947113660303698}
   - component: {fileID: 7819947113660303704}
+  - component: {fileID: -3083653479372613854}
+  - component: {fileID: 930401340236597534}
   m_Layer: 7
   m_Name: POYEN
   m_TagString: Untagged
@@ -164,3 +166,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _niveau: 2
   Child: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
+--- !u!114 &-3083653479372613854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7819947113660303696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3b36895b776084282cd515b08582a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 2
+--- !u!195 &930401340236597534
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7819947113660303696}
+  m_Enabled: 1
+  m_AgentTypeID: -1923039037
+  m_Radius: 0.75
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

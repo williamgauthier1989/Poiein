@@ -31,7 +31,14 @@ public class Poyoyoyo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        IEnumerator Jump()
+        {
+            while(true) {
+                yield return new WaitForSeconds(Random.Range(3, 25));
+                _rb.AddForce(Vector3.up * Random.Range(2, 5), ForceMode.Impulse);
+            }
+        }
+        StartCoroutine(Jump());
     }
 
     // Update is called once per frame
@@ -120,5 +127,10 @@ public class Poyoyoyo : MonoBehaviour
             }
             gameObject.SetActive(false);
         }
+    }
+    public void Spawn(Vector3 direction)
+    {
+        _rb.AddForce((Vector3.up * 3) + direction * Random.Range(4, 5), ForceMode.Impulse);
+
     }
 }
