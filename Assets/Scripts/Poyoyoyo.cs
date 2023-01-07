@@ -95,18 +95,6 @@ public class Poyoyoyo : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        /*if (Catch && (collision.gameObject.layer == 13))
-        {
-            // gameObject.SetActive(false);
-            Debug.Log("element : " + Element);
-            collision.gameObject.layer = 8;
-            gameObject.SetActive(false);
-        }*/
-        
-        // Debug.Log(collision.gameObject.layer);
-        //Debug.Log("catch ? " + Catch);
-        // Debug.Log("Tile neutre ? : " + (collision.gameObject.layer == 13));
-        //Debug.Log("name : " + collision.gameObject.name + ", layer : " + collision.gameObject.layer);
         if (Catch && (collision.gameObject.layer == 13))
         {
             Debug.Log("enter name : " + collision.gameObject.name + ", layer : " + collision.gameObject.layer);

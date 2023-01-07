@@ -15,14 +15,13 @@ public class SlimeDeplacement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-            Arrival = GameObject.FindGameObjectsWithTag("Arrival");
-            Debug.Log(Arrival.Length);
+        Arrival = GameObject.FindGameObjectsWithTag("Arrival");
+        Debug.Log(Arrival.Length);
 
         _agent = GetComponent<NavMeshAgent>();
         _agent.speed = Speed;
         _rand = Random.Range(0, Arrival.Length - 1);
         _agent.SetDestination(Arrival[_rand].transform.position);
-
     }
 
     // Update is called once per frame
