@@ -35,20 +35,7 @@ public class SlimeScinde : MonoBehaviour
 
     public void Scinder()
     {
-        if (_niveau > 0 && !_hasExploded && Child != null)
-        {
-            for (var i = 0; i < 2; i++)
-            {
-                var child = Instantiate(Child);
-                child.transform.position = transform.position;
-                child.GetComponent<Poyoyoyo>().Element = GetComponent<Poyoyoyo>().Element;
-                child.GetComponent<Poyoyoyo>().Spawn(UnityEngine.Random.onUnitSphere);
-                child.GetComponent<NavMeshAgent>().agentTypeID = GetComponent<NavMeshAgent>().agentTypeID;
 
-            }
-            transform.localScale = Vector3.one * 0.5f;
-            _hasExploded = true;
-        }
     }
 
 

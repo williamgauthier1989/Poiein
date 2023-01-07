@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Arrival
-  - Ground
+  - Neutre
   layers:
   - Default
   - TransparentFX
@@ -15,7 +15,7 @@ TagManager:
   - UI
   - Obstacle
   - Slime
-  - Ground
+  - Soil
   - Fire
   - Water
   - Veget

@@ -13,7 +13,7 @@ public class NavMeshManager : MonoBehaviour
 
     private void Awake()
     {
-        Tiles = GameObject.FindGameObjectsWithTag("Ground");
+        Tiles = GameObject.FindGameObjectsWithTag("Neutre");
     }
     // Start is called before the first frame update
     void Start()

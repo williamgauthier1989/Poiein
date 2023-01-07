@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 82092549}
   m_Layer: 13
   m_Name: Tiles (7)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268,10 +268,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!54 &82092550
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -299,7 +302,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &82092552
 MeshRenderer:
@@ -351,71 +354,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82092547}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &101304303
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1611990923052589624, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: Element
-      value: Water
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_Name
-      value: Moyen POYEN (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4631146315796818000, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_AgentTypeID
-      value: 1479372276
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
 --- !u!1 &182410866
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,7 +467,7 @@ GameObject:
   - component: {fileID: 225941059}
   m_Layer: 13
   m_Name: Tiles (23)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -561,10 +499,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!54 &225941060
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -592,7 +533,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &225941062
 MeshRenderer:
@@ -644,6 +585,59 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225941057}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &232727598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 232727600}
+  - component: {fileID: 232727599}
+  m_Layer: 0
+  m_Name: MeshManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &232727599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232727598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c535141b0e7855408cb76cfc5b60c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Poieins:
+  - {fileID: 919132149155446097, guid: 1b5cbe62926ea454b8b5d74daf79a849, type: 3}
+  - {fileID: 919132149155446097, guid: 3fe56026e8ebe1446b1cb6dabb7bfe34, type: 3}
+  - {fileID: 919132149155446097, guid: 70c07b872cefd074881edbb32590f28c, type: 3}
+  - {fileID: 919132149155446097, guid: 2b45c2859f46342489f3ea18faf03487, type: 3}
+  - {fileID: 919132149155446097, guid: 9284144bdd491154498c611deb7aa14a, type: 3}
+  - {fileID: 919132149155446097, guid: 00b1d7cee0409ff479195f16c2e34bda, type: 3}
+  - {fileID: 919132149155446097, guid: 1b131d1480467ef4a9fd6d0fbbd41027, type: 3}
+  PoieinsMesh: []
+--- !u!4 &232727600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232727598}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &280775132
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,7 +1039,7 @@ GameObject:
   - component: {fileID: 384029474}
   m_Layer: 13
   m_Name: Tiles (1)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1061,7 +1055,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &384029470
 MeshRenderer:
@@ -1156,10 +1150,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!1 &408588389
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,7 +1173,7 @@ GameObject:
   - component: {fileID: 408588391}
   m_Layer: 13
   m_Name: Tiles (20)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1208,10 +1205,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!54 &408588392
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1239,7 +1239,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &408588394
 MeshRenderer:
@@ -1349,7 +1349,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.05
+  m_VoxelSize: 0.11666667
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: c57bde4b3a8e60148a0ea93b20bbd9f6, type: 2}
 --- !u!1 &441230148
@@ -1420,7 +1420,7 @@ GameObject:
   - component: {fileID: 503497660}
   m_Layer: 13
   m_Name: Tiles (14)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1452,10 +1452,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!54 &503497661
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1483,7 +1486,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &503497663
 MeshRenderer:
@@ -1842,7 +1845,7 @@ GameObject:
   - component: {fileID: 661516309}
   m_Layer: 13
   m_Name: Tiles (15)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1874,10 +1877,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!54 &661516310
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1905,7 +1911,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &661516312
 MeshRenderer:
@@ -1973,7 +1979,7 @@ GameObject:
   - component: {fileID: 686268525}
   m_Layer: 13
   m_Name: Tiles (25)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2005,10 +2011,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!54 &686268526
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2036,7 +2045,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &686268528
 MeshRenderer:
@@ -2104,7 +2113,7 @@ GameObject:
   - component: {fileID: 699324595}
   m_Layer: 13
   m_Name: Tiles (19)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2136,10 +2145,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!54 &699324596
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2167,7 +2179,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &699324598
 MeshRenderer:
@@ -2277,7 +2289,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.05
+  m_VoxelSize: 0.11666667
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: 3b302b5c87884fd42b2839f41ec3751c, type: 2}
 --- !u!1 &732981635
@@ -2455,7 +2467,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802016029}
   m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
-  m_LocalPosition: {x: 0, y: 5, z: -8.7}
+  m_LocalPosition: {x: 0, y: 5.8, z: -16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2493,7 +2505,7 @@ GameObject:
   - component: {fileID: 829369181}
   m_Layer: 13
   m_Name: Tiles (13)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2525,10 +2537,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!54 &829369182
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2556,7 +2571,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &829369184
 MeshRenderer:
@@ -2680,7 +2695,7 @@ GameObject:
   - component: {fileID: 877437887}
   m_Layer: 13
   m_Name: Tiles (17)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2712,10 +2727,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!54 &877437888
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2743,7 +2761,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &877437890
 MeshRenderer:
@@ -2908,7 +2926,7 @@ GameObject:
   - component: {fileID: 972567009}
   m_Layer: 13
   m_Name: Tiles (11)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2940,10 +2958,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!54 &972567010
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2971,7 +2992,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &972567012
 MeshRenderer:
@@ -3372,7 +3393,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.05
+  m_VoxelSize: 0.11666667
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: 719eabf3e5e9e7942b08e08de9512d43, type: 2}
 --- !u!1 &1147018735
@@ -3488,7 +3509,7 @@ GameObject:
   - component: {fileID: 1177976513}
   m_Layer: 13
   m_Name: Tiles (4)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3504,7 +3525,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1177976509
 MeshRenderer:
@@ -3599,10 +3620,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!1 &1194175569
 GameObject:
   m_ObjectHideFlags: 0
@@ -3716,7 +3740,7 @@ GameObject:
   - component: {fileID: 1201658167}
   m_Layer: 13
   m_Name: Tiles (18)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3748,10 +3772,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!54 &1201658168
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3779,7 +3806,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1201658170
 MeshRenderer:
@@ -4041,7 +4068,7 @@ GameObject:
   - component: {fileID: 1276738858}
   m_Layer: 13
   m_Name: Tiles (8)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4073,10 +4100,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!54 &1276738859
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4104,7 +4134,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1276738861
 MeshRenderer:
@@ -4172,7 +4202,7 @@ GameObject:
   - component: {fileID: 1325582990}
   m_Layer: 13
   m_Name: Tiles (12)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4204,10 +4234,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!54 &1325582991
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4235,7 +4268,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1325582993
 MeshRenderer:
@@ -4303,7 +4336,7 @@ GameObject:
   - component: {fileID: 1443430067}
   m_Layer: 13
   m_Name: Tiles (3)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4319,7 +4352,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1443430063
 MeshRenderer:
@@ -4414,10 +4447,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!1 &1539801451
 GameObject:
   m_ObjectHideFlags: 0
@@ -4434,7 +4470,7 @@ GameObject:
   - component: {fileID: 1539801453}
   m_Layer: 13
   m_Name: Tiles (24)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4466,10 +4502,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!54 &1539801454
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4497,7 +4536,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1539801456
 MeshRenderer:
@@ -4662,7 +4701,7 @@ GameObject:
   - component: {fileID: 1618463432}
   m_Layer: 13
   m_Name: Tiles (10)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4694,10 +4733,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!54 &1618463433
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4725,7 +4767,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1618463435
 MeshRenderer:
@@ -4890,7 +4932,7 @@ GameObject:
   - component: {fileID: 1630585883}
   m_Layer: 13
   m_Name: Tiles (26)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4922,10 +4964,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!54 &1630585884
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4953,7 +4998,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1630585886
 MeshRenderer:
@@ -5071,7 +5116,7 @@ GameObject:
   - component: {fileID: 1666561251}
   m_Layer: 13
   m_Name: Tiles
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5087,7 +5132,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1666561247
 MeshRenderer:
@@ -5182,10 +5227,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!1 &1757483915
 GameObject:
   m_ObjectHideFlags: 0
@@ -5244,7 +5292,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.05
+  m_VoxelSize: 0.11666667
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: 65fb09b411178f34a853b6d91c9adfdf, type: 2}
 --- !u!1 &1786813434
@@ -5263,7 +5311,7 @@ GameObject:
   - component: {fileID: 1786813436}
   m_Layer: 13
   m_Name: Tiles (22)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5295,10 +5343,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!54 &1786813437
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5326,7 +5377,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1786813439
 MeshRenderer:
@@ -5499,7 +5550,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984755135}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3662784, y: 1.9312234, z: 0.88855076}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5527,7 +5578,7 @@ GameObject:
   - component: {fileID: 2027537643}
   m_Layer: 13
   m_Name: Tiles (16)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5559,10 +5610,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!54 &2027537644
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5590,7 +5644,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2027537646
 MeshRenderer:
@@ -5653,7 +5707,7 @@ GameObject:
   - component: {fileID: 2033315872}
   - component: {fileID: 2033315873}
   m_Layer: 0
-  m_Name: NavMesh Surface Ground
+  m_Name: NavMesh Surface Soil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5700,9 +5754,9 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.05
+  m_VoxelSize: 0.11666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 6375cb0c283070241beaee57e3486543, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: c0b80466fe4d15c4baefa159dccee176, type: 2}
 --- !u!1 &2034934025
 GameObject:
   m_ObjectHideFlags: 0
@@ -5719,7 +5773,7 @@ GameObject:
   - component: {fileID: 2034934027}
   m_Layer: 13
   m_Name: Tiles (9)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5751,10 +5805,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!54 &2034934028
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5782,7 +5839,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2034934030
 MeshRenderer:
@@ -5947,7 +6004,7 @@ GameObject:
   - component: {fileID: 2087329163}
   m_Layer: 13
   m_Name: Tiles (6)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5979,10 +6036,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!54 &2087329164
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6010,7 +6070,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2087329166
 MeshRenderer:
@@ -6062,136 +6122,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087329161}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &2091816634
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1611990923052589624, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: Element
-      value: Fire
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_Name
-      value: Moyen POYEN
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4631146315796818000, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_AgentTypeID
-      value: -334000983
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
---- !u!1001 &2112780564
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589630, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_Name
-      value: Moyen POYEN (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
 --- !u!1 &2138147385
 GameObject:
   m_ObjectHideFlags: 0
@@ -6208,7 +6138,7 @@ GameObject:
   - component: {fileID: 2138147387}
   m_Layer: 13
   m_Name: Tiles (21)
-  m_TagString: Ground
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6240,10 +6170,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
-  _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
-  Element: 
+  _prefabFire: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+  _prefabWater: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+  _prefabSoil: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+  _prefabRock: {fileID: 475842848307867902, guid: 041ec35ede3637644a208bfb17b5ae36, type: 3}
+  _prefabVegetal: {fileID: 3717291231627447026, guid: d2aec118e1c035942bc675fed650ac2d, type: 3}
   NavMeshAgentTypeID: 0
+  Element: 3
 --- !u!54 &2138147388
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6271,7 +6204,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.25, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2138147390
 MeshRenderer:
@@ -6380,3 +6313,174 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 864583e8186f5eb47b986af9f46ba6f6, type: 3}
+--- !u!1001 &536526474877586873
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4877822099233361955, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+      propertyPath: m_Name
+      value: WATER
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258605633605372569, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258605633605372569, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258605633605372569, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258605633605372569, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258605633605372569, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258605633605372569, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258605633605372569, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258605633605372569, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258605633605372569, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258605633605372569, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258605633605372569, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 718e7b7ffbb1b3a438802d07ad6b1741, type: 3}
+--- !u!1001 &3610006758145240682
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8592164128266435083, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+      propertyPath: m_Name
+      value: SOIL
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968548589695197361, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968548589695197361, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968548589695197361, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968548589695197361, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968548589695197361, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968548589695197361, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968548589695197361, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968548589695197361, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968548589695197361, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968548589695197361, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968548589695197361, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f98a0d5fec3cf2a4dabbb677f87b8ddf, type: 3}
+--- !u!1001 &3971204234148235908
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4979067923031759888, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+      propertyPath: m_Name
+      value: FIRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643823189116700330, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643823189116700330, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643823189116700330, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643823189116700330, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643823189116700330, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643823189116700330, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643823189116700330, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643823189116700330, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643823189116700330, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643823189116700330, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643823189116700330, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 23e29f350fe5a3e4696de52dea7a998c, type: 3}

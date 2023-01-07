@@ -15,7 +15,7 @@ public class SlimeDeplacement : MonoBehaviour
 
 
     int _try = 0;
-    private GameObject _currentPath = null;
+    [SerializeField] private GameObject _currentPath = null;
 
     private bool _idle;
 

@@ -10,7 +10,7 @@ public class PlayerHand : MonoBehaviour
     [SerializeField] readonly int layerMask = (1 << 7 | 1 << 8 | 1 << 9 | 1 << 10 | 1 << 11 | 1 << 12 | 1 << 13);
 
     Poyoyoyo Highlighted = null;
-    bool has_one = false;
+    [SerializeField] bool has_one = false;
     bool must_throw = false;
 
     Vector3 MoveVelocity = Vector3.zero;
@@ -55,6 +55,7 @@ public class PlayerHand : MonoBehaviour
             transform.position = Vector3.SmoothDamp(transform.position, hit.point + Vector3.up * 2.5f, ref MoveVelocity, SmoothTime);
             if (hit.transform.gameObject.layer == 7 && hit.transform.TryGetComponent<Poyoyoyo>(out Poyoyoyo c) && !has_one)
             {
+                Debug.Log("!!!");
                 Highlighted = c;
                 Highlighted.OnArmIn();
             } else if (!has_one)

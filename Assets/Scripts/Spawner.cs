@@ -6,11 +6,15 @@ using UnityEngine.AI;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private GameObject _prefabMedium;
-    [SerializeField] private GameObject _prefabSmall;
-    public string Element;
+    [SerializeField] private GameObject _prefabFire;
+    [SerializeField] private GameObject _prefabWater;
+    [SerializeField] private GameObject _prefabSoil;
+    [SerializeField] private GameObject _prefabRock;
+    [SerializeField] private GameObject _prefabVegetal;
+    [HideInInspector] public int NavMeshAgentTypeID;
+    [HideInInspector] public TYPE Element;
     private float _timer;
-    public int NavMeshAgentTypeID;
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,16 +27,33 @@ public class Spawner : MonoBehaviour
     {
         if (_timer <= 0)
         {
-            GameObject cube = null;
+            GameObject pref = null;
+            switch (Element)
+            {
+                case TYPE.Fire:
+                    pref = _prefabFire;
+                    break;
+                case TYPE.Water:
+                    pref = _prefabWater;
+                    break;
+                case TYPE.Soil:
+                    pref = _prefabSoil;
+                    break;
+                case TYPE.Rock:
+                    pref = _prefabRock;
+                    break;
+                case TYPE.Vegetal:
+                    pref = _prefabVegetal;
+                    break;
+            }
+            GameObject cube = Instantiate(pref);
+
             // Utiliser un pool ?? + Ajouter un max ???
             var rand = Random.value;
             if (rand <= 0.95)
             {
-                cube = Instantiate(_prefabSmall);
-            }
-            else
-            {
-                cube = Instantiate(_prefabMedium);
+                cube.GetComponent<Poyoyoyo>().isTiny = true;
+                cube.transform.localScale = Vector3.one * 0.75f;
             }
             cube.GetComponent<Poyoyoyo>().Spawn(Random.onUnitSphere);
             cube.GetComponent<Poyoyoyo>().Element = Element;

@@ -11,7 +11,6 @@ public class Poyoyoyo : MonoBehaviour
 {
     private Outline _outline;
     private Rigidbody _rb;
-    private SlimeScinde _scinde;
     private NavMeshAgent _agent;
 
     public float AspirationTime = 0.15f;
@@ -21,7 +20,9 @@ public class Poyoyoyo : MonoBehaviour
     private Transform _owner;
 
     public bool Catch;
-    public string Element;
+    public TYPE Element;
+    public bool isTiny;
+    public bool hasSplitted;
 
     private Vector3 _previousVelocity;
     private Vector3 _agentDestination;
@@ -32,32 +33,12 @@ public class Poyoyoyo : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody>();
         _outline = GetComponent<Outline>();
-        _scinde = GetComponent<SlimeScinde>();
         _agent = GetComponent<NavMeshAgent>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        switch (Element)
-        {
-            case "Fire":
-                GetComponent<MeshRenderer>().material.color = Color.red;
-                break;
-            case "Water":
-                GetComponent<MeshRenderer>().material.color = Color.blue;
-                break;
-            case "Ground":
-                GetComponent<MeshRenderer>().material.color = Color.white;
-                break;
-            case "Veget":
-                GetComponent<MeshRenderer>().material.color = Color.green;
-                break;
-            case "Rock":
-                GetComponent<MeshRenderer>().material.color = Color.gray;
-                break;
-        }
-
         IEnumerator Jump()
         {
             while (true)
@@ -85,12 +66,12 @@ public class Poyoyoyo : MonoBehaviour
                 _position = transform.position;
             if (_currentTime < AspirationTime)
             {
-                transform.position = Vector3.Lerp(_position, _owner.position - Vector3.up, _currentTime / AspirationTime);
+                transform.position = Vector3.Lerp(_position, _owner.position - (Vector3.up * 0.75f), _currentTime / AspirationTime);
                 _currentTime += Time.deltaTime;
             }
             else
             {
-                transform.position = _owner.position;
+                transform.position = _owner.position - (Vector3.up * 0.75f);
             }
         }
         else
@@ -115,7 +96,25 @@ public class Poyoyoyo : MonoBehaviour
     }
     public void OnGrabIn(Transform owner)
     {
-        _scinde.Scinder();
+        if (!isTiny && !hasSplitted)
+        {
+            for (var i = 0; i < 2; i++)
+            {
+                var child = Instantiate(gameObject);
+                child.transform.localScale = Vector3.one * 0.75f;
+                child.transform.position = transform.position;
+                child.GetComponent<Poyoyoyo>().Spawn(UnityEngine.Random.onUnitSphere);
+                child.GetComponent<Poyoyoyo>().isTiny = true;
+                child.GetComponent<Poyoyoyo>().Catch = false;
+                child.GetComponent<Poyoyoyo>()._owner = null;
+                child.GetComponent<Poyoyoyo>()._grabed = false;
+
+            }
+            transform.localScale = Vector3.one * 0.75f;
+            hasSplitted = true;
+        }
+
+
         _rb.isKinematic = true;
         _grabed = true;
         _owner = owner;
@@ -143,10 +142,10 @@ public class Poyoyoyo : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!Catch && collision.transform.CompareTag("Ground") && _previousVelocity.y < 0)
+        if (!Catch && collision.transform.CompareTag("Neutre") && _previousVelocity.y < 0)
         {
             _agent.enabled = true;
-            if (_agentHadPath)
+            if (_agentHadPath && _agent.isOnNavMesh)
                 _agent.destination = _agentDestination;
         }
 
@@ -154,25 +153,24 @@ public class Poyoyoyo : MonoBehaviour
         {
             switch (Element)
             {
-                case "Fire":
+                case TYPE.Fire:
                     collision.gameObject.layer = 9;
                     collision.gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
                     break;
-                case "Water":
+                case TYPE.Water:
                     collision.gameObject.layer = 10;
                     collision.gameObject.GetComponent<MeshRenderer>().material.color = Color.blue;
                     break;
-                case "Ground":
+                case TYPE.Soil:
                     collision.gameObject.layer = 8;
                     collision.gameObject.GetComponent<MeshRenderer>().material.color = Color.white;
                     break;
-                case "Veget":
+                case TYPE.Vegetal:
                     collision.gameObject.layer = 11;
                     collision.gameObject.GetComponent<MeshRenderer>().material.color = Color.green;
                     break;
-                case "Rock":
+                case TYPE.Rock:
                     collision.gameObject.layer = 12;
-
                     collision.gameObject.GetComponent<MeshRenderer>().material.color = Color.grey;
                     break;
                 default:

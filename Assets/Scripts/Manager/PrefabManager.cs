@@ -5,6 +5,7 @@ using UnityEngine;
 public class PrefabManager : MonoBehaviour
 {
     public GameObject[] Poieins;
+    public Mesh[] PoieinsMesh;
 
     // Start is called before the first frame update
     void Start()
