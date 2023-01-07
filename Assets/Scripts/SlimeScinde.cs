@@ -6,6 +6,17 @@ using UnityEngine;
 public class SlimeScinde : MonoBehaviour
 {
     [SerializeField] private int _niveau = 2;
+    public int Niveau
+    {
+        get
+        {
+            return _niveau;
+        }
+        set
+        {
+            _niveau = value;
+        }
+    }
     private bool _hasExploded = false;
 
     // Start is called before the first frame update
@@ -27,14 +38,10 @@ public class SlimeScinde : MonoBehaviour
             {
                 GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
                 cube.transform.position = transform.position;
-                if (_niveau == 2)
-                    cube.transform.localScale = Vector3.one * 0.5f;
-                else if (_niveau == 1)
-                    cube.transform.localScale = Vector3.one * 0.25f;
                 cube.layer = 7;
 
                 // REMPLACER PAR PREFAB
-               var rb= cube.AddComponent<Rigidbody>();
+                var rb = cube.AddComponent<Rigidbody>();
                 rb.constraints = RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationX;
                 var outline = cube.AddComponent<Outline>();
                 var scinde = cube.AddComponent<SlimeScinde>();
@@ -42,6 +49,12 @@ public class SlimeScinde : MonoBehaviour
                 outline.OutlineColor = new Color32(197, 46, 46, 255);
                 scinde._niveau = _niveau - 1;
                 poyoyo.AspirationTime = 0.15f;
+
+                if (scinde._niveau == 1)
+                    cube.transform.localScale = Vector3.one * 0.5f;
+                else if (scinde._niveau == 0)
+                    cube.transform.localScale = Vector3.one * 0.25f;
+
                 cube.transform.parent = GameObject.Find("Plane").transform;
             }
             transform.localScale = Vector3.one * 0.25f;
