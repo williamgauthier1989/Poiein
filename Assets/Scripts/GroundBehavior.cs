@@ -7,17 +7,23 @@ public class GroundBehavior : MonoBehaviour
 {
     public NavMeshSurface surface;
     private int _rand;
+    private int _previousLayer;
 
     // Start is called before the first frame update
     void Start()
     {
+        _previousLayer = gameObject.layer;
         surface.BuildNavMesh();
     }
 
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(ChangeLayer());
+        if (gameObject.layer != _previousLayer)
+        {
+            surface.BuildNavMesh();
+        }
+        // StartCoroutine(ChangeLayer());
     }
 
     private IEnumerator ChangeLayer()

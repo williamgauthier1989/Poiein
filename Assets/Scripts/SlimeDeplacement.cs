@@ -17,9 +17,8 @@ public class SlimeDeplacement : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
         _agent.speed = Speed;
         _rand = Random.Range(0, Arrival.Length - 1);
-        Debug.Log(_rand);
-        _agent.SetDestination(Arrival[9].position);
-        //_agent.SetDestination(Arrival[_rand].position);
+        // Debug.Log(_rand);
+        _agent.SetDestination(Arrival[_rand].position);
     }
 
     // Update is called once per frame
@@ -30,12 +29,12 @@ public class SlimeDeplacement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("other : " + other.gameObject.name);
+        // Debug.Log("other : " + other.gameObject.name);
         if (other.tag == "Arrival")
         {
-            Debug.Log("coucou");
+            // Debug.Log("coucou");
             _rand = Random.Range(0, Arrival.Length - 1);
-            Debug.Log(_rand);
+            // Debug.Log(_rand);
             _agent.SetDestination(Arrival[_rand].position);
         }
     }
