@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEditor.AI;
 using UnityEngine.AI;
 using System.Linq;
+using static UnityEngine.GraphicsBuffer;
 
 public class SlimeDeplacement : MonoBehaviour
 {
@@ -53,9 +54,19 @@ public class SlimeDeplacement : MonoBehaviour
         {
             var availables = Arrival.Where(x => x.gameObject != _currentPath).ToArray();
             _rand = Random.Range(0, availables.Length);
-            _agent.SetDestination(availables[_rand].transform.position);
             _currentPath = availables[_rand].gameObject;
             _idle = false;
+            
+            NavMeshPath path = new NavMeshPath();
+            _agent.CalculatePath(_currentPath.transform.position, path);
+            if (path.status == NavMeshPathStatus.PathComplete)
+            {
+                _agent.SetDestination(availables[_rand].transform.position);
+            } else
+            {
+                GetPath();
+            }
+
         } else
         {
             StartCoroutine(SearchForPath());
