@@ -40,7 +40,7 @@ public class Spawner : MonoBehaviour
             cube.GetComponent<Poyoyoyo>().Spawn(Random.onUnitSphere);
             cube.GetComponent<Poyoyoyo>().Element = Element;
             cube.transform.position = transform.position;
-            _timer = Random.Range(6, 20);
+            _timer = Random.Range(8, 22);
         }
 
         _timer -= Time.deltaTime;
