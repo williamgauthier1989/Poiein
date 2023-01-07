@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Arrival
   layers:
   - Default
   - TransparentFX
@@ -11,15 +12,14 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Obstacle
   - Slime
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Fire
+  - Water
+  - Veget
+  - Rock
+  - Neutre
   - 
   - 
   - 
