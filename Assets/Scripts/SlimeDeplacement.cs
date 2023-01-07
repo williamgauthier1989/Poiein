@@ -8,34 +8,26 @@ public class SlimeDeplacement : MonoBehaviour
 {
     private NavMeshAgent _agent;
     public int Speed;
-    public Transform[] Arrival;
+    private GameObject[] Arrival;
     private int _rand;
+    //private Poyoyoyo _poyo;
 
     // Start is called before the first frame update
     void Start()
     {
+            Arrival = GameObject.FindGameObjectsWithTag("Arrival");
+            Debug.Log(Arrival.Length);
+
         _agent = GetComponent<NavMeshAgent>();
         _agent.speed = Speed;
         _rand = Random.Range(0, Arrival.Length - 1);
-        // Debug.Log(_rand);
-        _agent.SetDestination(Arrival[_rand].position);
+        _agent.SetDestination(Arrival[_rand].transform.position);
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        // Debug.Log("other : " + other.gameObject.name);
-        if (other.tag == "Arrival")
-        {
-            // Debug.Log("coucou");
-            _rand = Random.Range(0, Arrival.Length - 1);
-            // Debug.Log(_rand);
-            _agent.SetDestination(Arrival[_rand].position);
-        }
     }
 }

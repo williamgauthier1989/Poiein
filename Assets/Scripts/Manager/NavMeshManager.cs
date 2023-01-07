@@ -24,7 +24,6 @@ public class NavMeshManager : MonoBehaviour
         foreach (NavMeshSurface surface in AllNavMeshSurface)
         {
             surface.BuildNavMesh();
-            Debug.Log("NavMesh Update");
         }
     }
 
@@ -36,9 +35,7 @@ public class NavMeshManager : MonoBehaviour
 
     private IEnumerator CheckLayers()
     {
-        Debug.Log("Wait");
         yield return new WaitForSeconds(3f);
-        Debug.Log("check begin");
         _change = false;
         for (int i = 0; i < _len; i++)
         {
@@ -53,7 +50,6 @@ public class NavMeshManager : MonoBehaviour
         {
             RefreshNavMesh();
         }
-        Debug.Log("Check end");
     }
 
     private void RefreshNavMesh()

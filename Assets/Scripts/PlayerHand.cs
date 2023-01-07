@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerHand : MonoBehaviour
 {
     [SerializeField] private float SmoothTime;
-    [SerializeField] readonly int layerMask = (1 << 7 | 1 << 8);
+    [SerializeField] readonly int layerMask = (1 << 7 | 1 << 8 | 1 << 9 | 1 << 10 | 1 << 11 | 1 << 12 | 1 << 13);
 
     Poyoyoyo Highlighted = null;
     bool has_one = false;
@@ -23,13 +23,16 @@ public class PlayerHand : MonoBehaviour
             {
                 if (!has_one)
                 {
+                    Highlighted.Catch = true;
                     Highlighted.OnGrabIn(gameObject.transform);
                     has_one = true;
                 }
                 else
                 {
+                    Highlighted.Catch = false;
                     has_one = false;
                     Highlighted.OnGrabOut();
+                    //Highlighted = null;
                 }
             }
             if (Input.GetMouseButtonDown(1))
@@ -55,6 +58,10 @@ public class PlayerHand : MonoBehaviour
                 Highlighted = c;
                 Highlighted.OnArmIn();
             }
+            /*else
+            {
+                Highlighted = null;
+            }*/
         }
 
         if (Highlighted != null && must_throw && has_one)
@@ -63,7 +70,5 @@ public class PlayerHand : MonoBehaviour
             Highlighted.OnThrow();
             must_throw = false;
         }
-
-
     }
 }

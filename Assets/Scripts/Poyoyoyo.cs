@@ -10,12 +10,16 @@ public class Poyoyoyo : MonoBehaviour
     private Outline _outline;
     private Rigidbody _rb;
     private SlimeScinde _scinde;
+    private SlimeEnviro _enviro;
 
     public float AspirationTime = 0.15f;
     private float _currentTime = 0;
     private Vector3 _position;
     private bool _grabed = false;
     private Transform _owner;
+    
+    public bool Catch;
+    public string Element;
 
     private void Awake()
     {
@@ -81,5 +85,52 @@ public class Poyoyoyo : MonoBehaviour
         _owner = null;
         _rb.AddForce(transform.up * -10, ForceMode.Impulse);
         //gameObject.SetActive(false);
+        Debug.Log("Throw");
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        Debug.Log("coucocu");
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        /*if (Catch && (collision.gameObject.layer == 13))
+        {
+            // gameObject.SetActive(false);
+            Debug.Log("element : " + Element);
+            collision.gameObject.layer = 8;
+            gameObject.SetActive(false);
+        }*/
+        
+        // Debug.Log(collision.gameObject.layer);
+        //Debug.Log("catch ? " + Catch);
+        // Debug.Log("Tile neutre ? : " + (collision.gameObject.layer == 13));
+        //Debug.Log("name : " + collision.gameObject.name + ", layer : " + collision.gameObject.layer);
+        if (Catch && (collision.gameObject.layer == 13))
+        {
+            Debug.Log("enter name : " + collision.gameObject.name + ", layer : " + collision.gameObject.layer);
+            switch (Element)
+            {
+                case "Fire":
+                    collision.gameObject.layer = 9;
+                    break;
+                case "Water":
+                    collision.gameObject.layer = 10;
+                    break;
+                case "Ground":
+                    collision.gameObject.layer = 8;
+                    break;
+                case "Veget":
+                    collision.gameObject.layer = 11;
+                    break;
+                case "Rock":
+                    collision.gameObject.layer = 12;
+                    break;
+                default:
+                    break;
+            }
+            gameObject.SetActive(false);
+        }
     }
 }
