@@ -30,8 +30,6 @@ public class CameraController : MonoBehaviour
         if (x != 0 || z != 0)
             TargetPosition = transform.position + new Vector3(x * 2, 0, z * 2);
 
-
-
         if (Input.GetKeyDown(KeyCode.Alpha5))
             TargetRotation -= 45f;
         if (Input.GetKeyDown(KeyCode.Alpha0))

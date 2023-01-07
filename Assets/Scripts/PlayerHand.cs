@@ -7,10 +7,11 @@ using UnityEngine;
 public class PlayerHand : MonoBehaviour
 {
     [SerializeField] private float SmoothTime;
-    [SerializeField] readonly int layerMask = (1 << 7 | 1 << 30);
+    [SerializeField] readonly int layerMask = (1 << 7 | 1 << 8);
 
     Poyoyoyo Highlighted = null;
     bool has_one = false;
+    bool must_throw = false;
 
     Vector3 MoveVelocity = Vector3.zero;
 
@@ -18,16 +19,22 @@ public class PlayerHand : MonoBehaviour
     {
         if (Highlighted != null)
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButtonDown(0))
             {
                 if (!has_one)
+                {
                     Highlighted.OnGrabIn(gameObject.transform);
-                has_one = true;
-                //Highlighted.transform.position = transform.position;
-            } else
+                    has_one = true;
+                }
+                else
+                {
+                    has_one = false;
+                    Highlighted.OnGrabOut();
+                }
+            }
+            if (Input.GetMouseButtonDown(1))
             {
-                has_one = false;
-                Highlighted.OnGrabOut();
+                must_throw = true;
             }
         }
 
@@ -49,5 +56,14 @@ public class PlayerHand : MonoBehaviour
                 Highlighted.OnArmIn();
             }
         }
+
+        if (Highlighted != null && must_throw && has_one)
+        {
+            has_one = false;
+            Highlighted.OnThrow();
+            must_throw = false;
+        }
+
+
     }
 }

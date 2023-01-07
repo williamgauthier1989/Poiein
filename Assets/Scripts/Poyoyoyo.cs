@@ -9,8 +9,9 @@ public class Poyoyoyo : MonoBehaviour
 {
     private Outline _outline;
     private Rigidbody _rb;
+    private SlimeScinde _scinde;
 
-    public float AspirationTime = 1;
+    public float AspirationTime = 0.15f;
     private float _currentTime = 0;
     private Vector3 _position;
     private bool _grabed = false;
@@ -20,6 +21,7 @@ public class Poyoyoyo : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody>();
         _outline = GetComponent<Outline>();
+        _scinde = GetComponent<SlimeScinde>();
     }
 
     // Start is called before the first frame update
@@ -37,7 +39,7 @@ public class Poyoyoyo : MonoBehaviour
                 _position = transform.position;
             if (_currentTime < AspirationTime)
             {
-                transform.position = Vector3.Lerp(_position, _owner.position, _currentTime / AspirationTime);
+                transform.position = Vector3.Lerp(_position, _owner.position - Vector3.up, _currentTime / AspirationTime);
                 _currentTime += Time.deltaTime;
             }
             else
@@ -60,14 +62,24 @@ public class Poyoyoyo : MonoBehaviour
     }
     public void OnGrabIn(Transform owner)
     {
+        _scinde.Scinder();
         _rb.isKinematic = true;
         _grabed = true;
         _owner = owner;
+
     }
     public void OnGrabOut()
     {
         _rb.isKinematic = false;
         _grabed = false;
         _owner = null;
+    }
+    public void OnThrow()
+    {
+        _rb.isKinematic = false;
+        _grabed = false;
+        _owner = null;
+        _rb.AddForce(transform.up * -10, ForceMode.Impulse);
+        //gameObject.SetActive(false);
     }
 }
