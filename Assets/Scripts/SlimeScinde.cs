@@ -5,11 +5,12 @@ using UnityEngine;
 public class SlimeScinde : MonoBehaviour
 {
     public GameObject[] Children;
+    private int _niveau;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        _niveau = 2;
     }
 
     // Update is called once per frame
@@ -20,10 +21,14 @@ public class SlimeScinde : MonoBehaviour
 
     private void OnMouseDown()
     {
-        foreach (GameObject child in Children)
+        if (_niveau > 0)
         {
-            child.SetActive(true);
+            foreach (GameObject child in Children)
+            {
+                child.SetActive(true);
+                child.GetComponent<SlimeScinde>()._niveau -= 1;
+            }
+            gameObject.SetActive(false);
         }
-        gameObject.SetActive(false);
     }
 }
