@@ -12,6 +12,7 @@ TagManager:
   - Water
   - UI
   - 
+  - Slime
   - 
   - 
   - 
@@ -34,8 +35,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Ground
   - 
   m_SortingLayers:
   - name: Default
