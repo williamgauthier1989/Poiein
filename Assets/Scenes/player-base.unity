@@ -166,7 +166,7 @@ BoxCollider:
   m_GameObject: {fileID: 66252419}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -177,7 +177,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66252419}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -268,10 +268,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!54 &82092550
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -459,7 +459,7 @@ BoxCollider:
   m_GameObject: {fileID: 182410866}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -470,7 +470,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 182410866}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -561,10 +561,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!54 &225941060
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -687,7 +687,7 @@ BoxCollider:
   m_GameObject: {fileID: 280775132}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -698,7 +698,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280775132}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -784,7 +784,7 @@ BoxCollider:
   m_GameObject: {fileID: 352221741}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -795,7 +795,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352221741}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -881,7 +881,7 @@ BoxCollider:
   m_GameObject: {fileID: 357908343}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -892,7 +892,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357908343}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1156,10 +1156,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!1 &408588389
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,10 +1208,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!54 &408588392
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1349,7 +1349,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.11666667
+  m_VoxelSize: 0.05
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: c57bde4b3a8e60148a0ea93b20bbd9f6, type: 2}
 --- !u!1 &441230148
@@ -1452,10 +1452,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!54 &503497661
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1578,7 +1578,7 @@ BoxCollider:
   m_GameObject: {fileID: 539261024}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1589,7 +1589,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539261024}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1675,7 +1675,7 @@ BoxCollider:
   m_GameObject: {fileID: 548779697}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1686,7 +1686,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548779697}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1772,7 +1772,7 @@ BoxCollider:
   m_GameObject: {fileID: 584367691}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1783,7 +1783,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584367691}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1874,10 +1874,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!54 &661516310
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2005,10 +2005,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!54 &686268526
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2136,10 +2136,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!54 &699324596
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2277,7 +2277,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.11666667
+  m_VoxelSize: 0.05
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: 3b302b5c87884fd42b2839f41ec3751c, type: 2}
 --- !u!1 &732981635
@@ -2323,7 +2323,7 @@ BoxCollider:
   m_GameObject: {fileID: 732981635}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -2334,7 +2334,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732981635}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2525,10 +2525,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!54 &829369182
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2712,10 +2712,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!54 &877437888
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2838,7 +2838,7 @@ BoxCollider:
   m_GameObject: {fileID: 915680348}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -2849,7 +2849,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915680348}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2940,10 +2940,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!54 &972567010
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3066,7 +3066,7 @@ BoxCollider:
   m_GameObject: {fileID: 1023522085}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -3077,7 +3077,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023522085}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3163,7 +3163,7 @@ BoxCollider:
   m_GameObject: {fileID: 1046125475}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -3174,7 +3174,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1046125475}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3260,7 +3260,7 @@ BoxCollider:
   m_GameObject: {fileID: 1068517032}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -3271,7 +3271,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1068517032}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3372,7 +3372,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.11666667
+  m_VoxelSize: 0.05
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: 719eabf3e5e9e7942b08e08de9512d43, type: 2}
 --- !u!1 &1147018735
@@ -3418,7 +3418,7 @@ BoxCollider:
   m_GameObject: {fileID: 1147018735}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -3429,7 +3429,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147018735}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3599,10 +3599,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!1 &1194175569
 GameObject:
   m_ObjectHideFlags: 0
@@ -3646,7 +3646,7 @@ BoxCollider:
   m_GameObject: {fileID: 1194175569}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -3657,7 +3657,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194175569}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3748,10 +3748,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!54 &1201658168
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3874,7 +3874,7 @@ BoxCollider:
   m_GameObject: {fileID: 1254162977}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
@@ -3885,7 +3885,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254162977}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3971,7 +3971,7 @@ BoxCollider:
   m_GameObject: {fileID: 1264084261}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -3982,7 +3982,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264084261}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4073,10 +4073,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!54 &1276738859
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4204,10 +4204,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!54 &1325582991
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4414,10 +4414,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!1 &1539801451
 GameObject:
   m_ObjectHideFlags: 0
@@ -4466,10 +4466,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!54 &1539801454
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4592,7 +4592,7 @@ BoxCollider:
   m_GameObject: {fileID: 1552063088}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -4603,7 +4603,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552063088}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4694,10 +4694,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!54 &1618463433
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4820,7 +4820,7 @@ BoxCollider:
   m_GameObject: {fileID: 1629475468}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -4831,7 +4831,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629475468}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4922,10 +4922,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!54 &1630585884
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5182,10 +5182,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!1 &1757483915
 GameObject:
   m_ObjectHideFlags: 0
@@ -5236,7 +5236,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 9459
+    m_Bits: 9463
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
@@ -5244,7 +5244,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.11666667
+  m_VoxelSize: 0.05
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: 65fb09b411178f34a853b6d91c9adfdf, type: 2}
 --- !u!1 &1786813434
@@ -5295,10 +5295,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!54 &1786813437
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5421,7 +5421,7 @@ BoxCollider:
   m_GameObject: {fileID: 1984153346}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -5432,7 +5432,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984153346}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5559,10 +5559,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!54 &2027537644
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5700,7 +5700,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.11666667
+  m_VoxelSize: 0.05
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: 6375cb0c283070241beaee57e3486543, type: 2}
 --- !u!1 &2034934025
@@ -5751,10 +5751,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!54 &2034934028
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5877,7 +5877,7 @@ BoxCollider:
   m_GameObject: {fileID: 2073716516}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -5888,7 +5888,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073716516}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5979,10 +5979,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!54 &2087329164
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6121,6 +6121,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moyen POYEN
       objectReference: {fileID: 0}
+    - target: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4631146315796818000, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
       propertyPath: m_AgentTypeID
       value: -334000983
@@ -6182,6 +6186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moyen POYEN (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
 --- !u!1 &2138147385
@@ -6232,10 +6240,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287e4dd274dae4e43ae62be3c6be17e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabBig: {fileID: 7819947113660303696, guid: 531f9363e7a8b1d499874f437fd71478, type: 3}
   _prefabMedium: {fileID: 1611990923052589762, guid: 6484d2040bd78dc4abce0771faa9af52, type: 3}
   _prefabSmall: {fileID: 1910636644783002867, guid: ec7a75be91c42df43b8010d59b02cc42, type: 3}
   Element: 
+  NavMeshAgentTypeID: 0
 --- !u!54 &2138147388
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -63,7 +63,7 @@ public class Poyoyoyo : MonoBehaviour
             while (true)
             {
                 yield return new WaitForSeconds(Random.Range(4, 16));
-                if (_owner == null)
+                if (_owner == null && _rb.velocity.y == 0)
                 {
                     _rb.velocity = _agent.velocity;
                     _agentHadPath = _agent.hasPath;
@@ -178,8 +178,10 @@ public class Poyoyoyo : MonoBehaviour
                 default:
                     break;
             }
+            collision.gameObject.GetComponent<Spawner>().NavMeshAgentTypeID = _agent.agentTypeID;
             collision.gameObject.GetComponent<Spawner>().enabled = true;
             collision.gameObject.GetComponent<Spawner>().Element = Element;
+            Catch = false;
             gameObject.SetActive(false);
         }
     }

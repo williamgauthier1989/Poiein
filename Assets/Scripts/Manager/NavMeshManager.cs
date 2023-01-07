@@ -29,30 +29,33 @@ public class NavMeshManager : MonoBehaviour
         {
             surface.BuildNavMesh();
         }
+        StartCoroutine(CheckLayers());
     }
 
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(CheckLayers());
     }
 
     private IEnumerator CheckLayers()
     {
-        yield return new WaitForSeconds(3f);
-        _change = false;
-        for (int i = 0; i < _len; i++)
+        while (true)
         {
-            if (Tiles[i].layer != _layersTiles[i])
+            yield return new WaitForSeconds(1.5f);
+            _change = false;
+            for (int i = 0; i < _len; i++)
             {
-                _layersTiles[i] = Tiles[i].layer;
-                _change = true;
+                if (Tiles[i].layer != _layersTiles[i])
+                {
+                    _layersTiles[i] = Tiles[i].layer;
+                    _change = true;
+                }
             }
-        }
 
-        if (_change)
-        {
-            RefreshNavMesh();
+            if (_change)
+            {
+                RefreshNavMesh();
+            }
         }
     }
 

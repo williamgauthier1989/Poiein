@@ -13,6 +13,8 @@ public class SlimeDeplacement : MonoBehaviour
     private GameObject[] Arrival;
     private int _rand;
 
+
+    int _try = 0;
     private GameObject _currentPath = null;
 
     private bool _idle;
@@ -50,24 +52,32 @@ public class SlimeDeplacement : MonoBehaviour
 
     private void GetPath()
     {
+        _try += 1;
         if (_agent.enabled)
         {
             var availables = Arrival.Where(x => x.gameObject != _currentPath).ToArray();
             _rand = Random.Range(0, availables.Length);
             _currentPath = availables[_rand].gameObject;
             _idle = false;
-            
+
             NavMeshPath path = new NavMeshPath();
             _agent.CalculatePath(_currentPath.transform.position, path);
             if (path.status == NavMeshPathStatus.PathComplete)
             {
                 _agent.SetDestination(availables[_rand].transform.position);
-            } else
+                _try = 0;
+            }
+            else
             {
-                GetPath();
+                if (_try < 3)
+                    GetPath();
+                else
+                    StartCoroutine(SearchForPath());
+
             }
 
-        } else
+        }
+        else
         {
             StartCoroutine(SearchForPath());
         }

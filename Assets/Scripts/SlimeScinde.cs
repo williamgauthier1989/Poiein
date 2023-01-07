@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -42,9 +43,13 @@ public class SlimeScinde : MonoBehaviour
                 child.transform.position = transform.position;
                 child.GetComponent<Poyoyoyo>().Element = GetComponent<Poyoyoyo>().Element;
                 child.GetComponent<Poyoyoyo>().Spawn(UnityEngine.Random.onUnitSphere);
+                child.GetComponent<NavMeshAgent>().agentTypeID = GetComponent<NavMeshAgent>().agentTypeID;
+
             }
             transform.localScale = Vector3.one * 0.5f;
             _hasExploded = true;
         }
     }
+
+
 }
