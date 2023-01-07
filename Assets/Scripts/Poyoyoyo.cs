@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using static UnityEngine.UI.GridLayoutGroup;
@@ -10,32 +12,65 @@ public class Poyoyoyo : MonoBehaviour
     private Outline _outline;
     private Rigidbody _rb;
     private SlimeScinde _scinde;
-    private SlimeEnviro _enviro;
+    private NavMeshAgent _agent;
 
     public float AspirationTime = 0.15f;
     private float _currentTime = 0;
     private Vector3 _position;
     private bool _grabed = false;
     private Transform _owner;
-    
+
     public bool Catch;
     public string Element;
+
+    private Vector3 _previousVelocity;
+    private Vector3 _agentDestination;
+    private bool _agentHadPath;
+
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
         _outline = GetComponent<Outline>();
         _scinde = GetComponent<SlimeScinde>();
+        _agent = GetComponent<NavMeshAgent>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        switch (Element)
+        {
+            case "Fire":
+                GetComponent<MeshRenderer>().material.color = Color.red;
+                break;
+            case "Water":
+                GetComponent<MeshRenderer>().material.color = Color.blue;
+                break;
+            case "Ground":
+                GetComponent<MeshRenderer>().material.color = Color.white;
+                break;
+            case "Veget":
+                GetComponent<MeshRenderer>().material.color = Color.green;
+                break;
+            case "Rock":
+                GetComponent<MeshRenderer>().material.color = Color.gray;
+                break;
+        }
+
         IEnumerator Jump()
         {
-            while(true) {
-                yield return new WaitForSeconds(Random.Range(3, 25));
-                _rb.AddForce(Vector3.up * Random.Range(2, 5), ForceMode.Impulse);
+            while (true)
+            {
+                yield return new WaitForSeconds(Random.Range(4, 16));
+                if (_owner == null)
+                {
+                    _rb.velocity = _agent.velocity;
+                    _agentHadPath = _agent.hasPath;
+                    _agentDestination = _agent.destination;
+                    _agent.enabled = false;
+                    _rb.AddForce(Vector3.up * Random.Range(3, 8), ForceMode.Impulse);
+                }
             }
         }
         StartCoroutine(Jump());
@@ -57,10 +92,17 @@ public class Poyoyoyo : MonoBehaviour
             {
                 transform.position = _owner.position;
             }
-        } else
+        }
+        else
         {
             _currentTime = 0;
         }
+
+    }
+
+    private void FixedUpdate()
+    {
+        _previousVelocity = _rb.velocity;
     }
 
     public void OnArmIn()
@@ -78,6 +120,11 @@ public class Poyoyoyo : MonoBehaviour
         _grabed = true;
         _owner = owner;
 
+        _rb.velocity = _agent.velocity;
+        _agentHadPath = _agent.hasPath;
+        _agentDestination = _agent.destination;
+        _agent.enabled = false;
+
     }
     public void OnGrabOut()
     {
@@ -91,29 +138,18 @@ public class Poyoyoyo : MonoBehaviour
         _grabed = false;
         _owner = null;
         _rb.AddForce(transform.up * -10, ForceMode.Impulse);
-        //gameObject.SetActive(false);
-        Debug.Log("Throw");
     }
 
-    private void OnCollisionStay(Collision collision)
-    {
-        Debug.Log("coucocu");
-    }
 
     private void OnCollisionEnter(Collision collision)
     {
-        /*if (Catch && (collision.gameObject.layer == 13))
+        if (!Catch && collision.transform.CompareTag("Ground") && _previousVelocity.y < 0)
         {
-            // gameObject.SetActive(false);
-            Debug.Log("element : " + Element);
-            collision.gameObject.layer = 8;
-            gameObject.SetActive(false);
-        }*/
-        
-        // Debug.Log(collision.gameObject.layer);
-        //Debug.Log("catch ? " + Catch);
-        // Debug.Log("Tile neutre ? : " + (collision.gameObject.layer == 13));
-        //Debug.Log("name : " + collision.gameObject.name + ", layer : " + collision.gameObject.layer);
+            _agent.enabled = true;
+            if (_agentHadPath)
+                _agent.destination = _agentDestination;
+        }
+
         if (Catch && (collision.gameObject.layer == 13))
         {
             Debug.Log("enter name : " + collision.gameObject.name + ", layer : " + collision.gameObject.layer);
@@ -121,28 +157,44 @@ public class Poyoyoyo : MonoBehaviour
             {
                 case "Fire":
                     collision.gameObject.layer = 9;
+                    collision.gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
                     break;
                 case "Water":
                     collision.gameObject.layer = 10;
+                    collision.gameObject.GetComponent<MeshRenderer>().material.color = Color.blue;
                     break;
                 case "Ground":
                     collision.gameObject.layer = 8;
+                    collision.gameObject.GetComponent<MeshRenderer>().material.color = Color.white;
                     break;
                 case "Veget":
                     collision.gameObject.layer = 11;
+                    collision.gameObject.GetComponent<MeshRenderer>().material.color = Color.green;
                     break;
                 case "Rock":
                     collision.gameObject.layer = 12;
+
+                    collision.gameObject.GetComponent<MeshRenderer>().material.color = Color.grey;
                     break;
                 default:
                     break;
             }
+            collision.gameObject.GetComponent<Spawner>().enabled = true;
+            collision.gameObject.GetComponent<Spawner>().Element = Element;
             gameObject.SetActive(false);
         }
     }
     public void Spawn(Vector3 direction)
     {
-        _rb.AddForce((Vector3.up * 3) + direction * Random.Range(4, 5), ForceMode.Impulse);
+        GetComponent<Collider>().enabled = false;
+        _agent.enabled = false;
+        _rb.AddForce((Vector3.up * 6) + direction * Random.Range(2, 4), ForceMode.Impulse);
+        IEnumerator RenableCollision()
+        {
+            yield return new WaitForSeconds(.1f);
+            GetComponent<Collider>().enabled = true;
+        }
+        StartCoroutine(RenableCollision());
 
     }
 }

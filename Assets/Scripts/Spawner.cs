@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private GameObject _prefab;
+    [SerializeField] private GameObject _prefabBig;
+    [SerializeField] private GameObject _prefabMedium;
+    [SerializeField] private GameObject _prefabSmall;
+    public string Element;
     private float _timer;
 
     // Start is called before the first frame update
@@ -18,23 +21,25 @@ public class Spawner : MonoBehaviour
     {
         if (_timer <= 0)
         {
+            GameObject cube = null;
             // Utiliser un pool ?? + Ajouter un max ???
-            GameObject cube = Instantiate(_prefab);
-            cube.transform.parent = GameObject.Find("Plane").transform;
-            cube.GetComponent<Poyoyoyo>().Spawn(Random.onUnitSphere);
-            var scinder = cube.GetComponent<SlimeScinde>();
             var rand = Random.value;
             if (rand <= 0.70)
-                scinder.Niveau = 0;
-            else if (rand <= 0.9)
-                scinder.Niveau = 1;
-            else
-                scinder.Niveau = 2;
+            {
+                cube = Instantiate(_prefabSmall);
 
-            if (scinder.Niveau == 1)
-                cube.transform.localScale = Vector3.one * 0.5f;
-            if (scinder.Niveau == 0)
-                cube.transform.localScale = Vector3.one * 0.25f;
+            }
+            else if (rand <= 0.9)
+            {
+                cube = Instantiate(_prefabMedium);
+            }
+            else
+            {
+                cube = Instantiate(_prefabBig);
+            }
+            cube.GetComponent<Poyoyoyo>().Spawn(Random.onUnitSphere);
+            cube.GetComponent<Poyoyoyo>().Element = Element;
+            cube.transform.position = transform.position;
             _timer = Random.Range(5, 15);
         }
 

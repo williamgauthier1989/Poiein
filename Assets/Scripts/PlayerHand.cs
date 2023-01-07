@@ -57,11 +57,10 @@ public class PlayerHand : MonoBehaviour
             {
                 Highlighted = c;
                 Highlighted.OnArmIn();
-            }
-            /*else
+            } else if (!has_one)
             {
                 Highlighted = null;
-            }*/
+            }
         }
 
         if (Highlighted != null && must_throw && has_one)

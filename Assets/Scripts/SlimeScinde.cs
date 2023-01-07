@@ -38,8 +38,10 @@ public class SlimeScinde : MonoBehaviour
         {
             for (var i = 0; i < 2; i++)
             {
-                Instantiate(Child);
-                Child.GetComponent<Poyoyoyo>().Element = GetComponent<Poyoyoyo>().Element;
+                var child = Instantiate(Child);
+                child.transform.position = transform.position;
+                child.GetComponent<Poyoyoyo>().Element = GetComponent<Poyoyoyo>().Element;
+                child.GetComponent<Poyoyoyo>().Spawn(UnityEngine.Random.onUnitSphere);
             }
             transform.localScale = Vector3.one * 0.5f;
             _hasExploded = true;
