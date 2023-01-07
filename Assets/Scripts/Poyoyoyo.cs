@@ -151,14 +151,17 @@ public class Poyoyoyo : MonoBehaviour
         {
             _rb.AddForce(Random.insideUnitSphere * 2 + transform.up * 2, ForceMode.Impulse);
         }
-        if (!Catch && collision.transform.CompareTag("Neutre") && _previousVelocity.y < 0)
+        if (!Catch && collision.transform.CompareTag("Neutre") && _previousVelocity.y < 0 && gameObject.activeSelf)
         {
             _agent.enabled = true;
             if (_agentHadPath && _agent.isOnNavMesh)
                 _agent.destination = _agentDestination;
 
-            if (_previousVelocity.y < -.5f) ;
-            StartCoroutine(Splash());
+            if (_previousVelocity.y < -.5f)
+            {
+                StartCoroutine(Splash());
+                return;
+            }
 
         }
 
@@ -215,7 +218,7 @@ public class Poyoyoyo : MonoBehaviour
         if (_splashing)
             yield return null;
         float current = 0;
-        float duration = Random.Range(0.15f, .4f);
+        float duration = Random.Range(0.25f, .35f);
         float x_splash = Random.Range(1.4f, 2.8f);
         float z_splash = Random.Range(1.4f, 2.8f);
         Vector3 begin = transform.localScale;
@@ -242,7 +245,7 @@ public class Poyoyoyo : MonoBehaviour
         if (_unSplashing)
             yield return null;
         float current = 0;
-        float duration = Random.Range(0.25f, .45f);
+        float duration = Random.Range(0.25f, .35f);
 
         Vector3 begin = transform.localScale;
         while (true)
