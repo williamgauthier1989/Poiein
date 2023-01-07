@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private GameObject _prefabBig;
     [SerializeField] private GameObject _prefabMedium;
     [SerializeField] private GameObject _prefabSmall;
     public string Element;
@@ -32,10 +31,6 @@ public class Spawner : MonoBehaviour
             else if (rand <= 0.95)
             {
                 cube = Instantiate(_prefabMedium);
-            }
-            else
-            {
-                cube = Instantiate(_prefabBig);
             }
             cube.GetComponent<Poyoyoyo>().Spawn(Random.onUnitSphere);
             cube.GetComponent<Poyoyoyo>().Element = Element;

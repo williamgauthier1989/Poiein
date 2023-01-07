@@ -152,7 +152,6 @@ public class Poyoyoyo : MonoBehaviour
 
         if (Catch && (collision.gameObject.layer == 13))
         {
-            Debug.Log("enter name : " + collision.gameObject.name + ", layer : " + collision.gameObject.layer);
             switch (Element)
             {
                 case "Fire":

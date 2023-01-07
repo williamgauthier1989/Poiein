@@ -6,11 +6,15 @@ using UnityEngine.AI;
 public class NavMeshManager : MonoBehaviour
 {
     public NavMeshSurface[] AllNavMeshSurface;
-    public GameObject[] Tiles;
+    private GameObject[] Tiles;
     private int[] _layersTiles;
     private int _len;
     private bool _change;
 
+    private void Awake()
+    {
+        Tiles = GameObject.FindGameObjectsWithTag("Ground");
+    }
     // Start is called before the first frame update
     void Start()
     {

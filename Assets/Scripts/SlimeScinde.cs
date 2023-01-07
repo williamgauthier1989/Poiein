@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class SlimeScinde : MonoBehaviour
 {
-    [SerializeField] private int _niveau = 2;
+    [SerializeField] private int _niveau = 1;
     public int Niveau
     {
         get
