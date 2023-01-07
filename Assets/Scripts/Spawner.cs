@@ -24,12 +24,12 @@ public class Spawner : MonoBehaviour
             GameObject cube = null;
             // Utiliser un pool ?? + Ajouter un max ???
             var rand = Random.value;
-            if (rand <= 0.70)
+            if (rand <= 0.8)
             {
                 cube = Instantiate(_prefabSmall);
 
             }
-            else if (rand <= 0.9)
+            else if (rand <= 0.95)
             {
                 cube = Instantiate(_prefabMedium);
             }
@@ -40,7 +40,7 @@ public class Spawner : MonoBehaviour
             cube.GetComponent<Poyoyoyo>().Spawn(Random.onUnitSphere);
             cube.GetComponent<Poyoyoyo>().Element = Element;
             cube.transform.position = transform.position;
-            _timer = Random.Range(5, 15);
+            _timer = Random.Range(6, 20);
         }
 
         _timer -= Time.deltaTime;
