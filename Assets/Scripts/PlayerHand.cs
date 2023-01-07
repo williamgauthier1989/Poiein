@@ -21,7 +21,7 @@ public class PlayerHand : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask))
         {
-            transform.position = Vector3.SmoothDamp(transform.position, hit.point + Vector3.up * 10, ref MoveVelocity, SmoothTime);
+            transform.position = Vector3.SmoothDamp(transform.position, hit.point + Vector3.up * 5, ref MoveVelocity, SmoothTime);
             if (hit.transform.gameObject.layer == 7 && hit.transform.TryGetComponent<Outline>(out Outline c))
             {
                 c.OutlineWidth = 8;
