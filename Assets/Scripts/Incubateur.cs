@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Incubateur : MonoBehaviour
 {
     public Transform[] Emplacements;
     public Transform Retour;
-    public GameObject TypePoiein;
+    public GameObject[] TypePoiein;
 
     private int _nbPoiein;
     private GameObject[] _poieinFusion;
@@ -40,39 +41,42 @@ public class Incubateur : MonoBehaviour
         string element1 = _poieinFusion[0].GetComponent<Poyoyoyo>().Element;
         string element2 = _poieinFusion[1].GetComponent<Poyoyoyo>().Element;
 
+        int index = 0;
+
         switch (element1)
         {
             case "Fire":
                 if (element2 == "Ground")
                 {
-                    Instantiate(TypePoiein); // roche
-                    TypePoiein.GetComponent<Poyoyoyo>().Element = "Rock";
+                    index = 4;
                 }
                 break;
             case "Water":
                 if (element2 == "Ground")
                 {
-                    Instantiate(TypePoiein); // vegetal
-                    TypePoiein.GetComponent<Poyoyoyo>().Element = "Veget";
+                    index = 3;
                 }
                 break;
             case "Ground":
                 if (element2 == "Water")
                 {
-                    Instantiate(TypePoiein); // vegetal
-                    TypePoiein.GetComponent<Poyoyoyo>().Element = "Veget";
+                    index = 3;
                 }
                 else if (element2 == "Fire")
                 {
-                    Instantiate(TypePoiein); // roche
-                    TypePoiein.GetComponent<Poyoyoyo>().Element = "Rock";
+                    index = 4;
                 }
                 break;
             default:
                 break;
         }
-        TypePoiein.transform.position = Retour.position;
+
+        GameObject g = Instantiate(TypePoiein[index]);
+        g.transform.position = Retour.position;
+        g.SetActive(true);
+
         _poieinFusion[0].SetActive(false);
         _poieinFusion[1].SetActive(false);
+        _nbPoiein = 0;
     }
 }
