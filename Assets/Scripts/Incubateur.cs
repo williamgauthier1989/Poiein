@@ -38,31 +38,31 @@ public class Incubateur : MonoBehaviour
 
     private void Fusion()
     {
-        string element1 = _poieinFusion[0].GetComponent<Poyoyoyo>().Element;
-        string element2 = _poieinFusion[1].GetComponent<Poyoyoyo>().Element;
+        TYPE element1 = _poieinFusion[0].GetComponent<Poyoyoyo>().Element;
+        TYPE element2 = _poieinFusion[1].GetComponent<Poyoyoyo>().Element;
 
         int index = 0;
 
         switch (element1)
         {
-            case "Fire":
-                if (element2 == "Ground")
+            case TYPE.Fire:
+                if (element2 == TYPE.Soil)
                 {
                     index = 4;
                 }
                 break;
-            case "Water":
-                if (element2 == "Ground")
+            case TYPE.Water:
+                if (element2 == TYPE.Soil)
                 {
                     index = 3;
                 }
                 break;
-            case "Ground":
-                if (element2 == "Water")
+            case TYPE.Soil:
+                if (element2 == TYPE.Water)
                 {
                     index = 3;
                 }
-                else if (element2 == "Fire")
+                else if (element2 == TYPE.Fire)
                 {
                     index = 4;
                 }
