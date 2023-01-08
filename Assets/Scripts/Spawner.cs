@@ -25,6 +25,8 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.InPause)
+            return;
         if (_timer <= 0)
         {
             GameObject pref = null;

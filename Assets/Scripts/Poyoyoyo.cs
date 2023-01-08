@@ -62,6 +62,12 @@ public class Poyoyoyo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.InPause)
+            _agent.isStopped = true;
+        else if (_agent.isStopped)
+            _agent.isStopped = false;
+        if (GameManager.Instance.InPause)
+            return;
         if (_grabed)
         {
             if (_currentTime == 0)

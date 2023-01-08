@@ -33,6 +33,8 @@ public class SlimeDeplacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.InPause)
+            return;
         if (!_agent.pathPending && _agent.enabled)
         {
             if (_agent.remainingDistance <= _agent.stoppingDistance)

@@ -25,6 +25,8 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.InPause)
+            return;
         float x = Convert.ToSingle(Input.GetKey(KeyCode.D)) - Convert.ToSingle(Input.GetKey(KeyCode.Q));
         float z = Convert.ToSingle(Input.GetKey(KeyCode.Z)) - Convert.ToSingle(Input.GetKey(KeyCode.S));
         if (x != 0 || z != 0)

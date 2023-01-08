@@ -17,6 +17,8 @@ public class PlayerHand : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.InPause)
+            return;
         if (Highlighted != null)
         {
             if (Input.GetMouseButtonDown(0))
@@ -46,6 +48,8 @@ public class PlayerHand : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (GameManager.Instance.InPause)
+            return;
         if (Highlighted != null)
             Highlighted.OnArmOut();
 
