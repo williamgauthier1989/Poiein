@@ -95,11 +95,6 @@ public class Poyoyoyo : MonoBehaviour
         Debug.Log("Throw");
     }
 
-    private void OnCollisionStay(Collision collision)
-    {
-        Debug.Log("coucocu");
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (Catch && (collision.gameObject.layer == 13))

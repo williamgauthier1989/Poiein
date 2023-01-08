@@ -33,7 +33,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1910636644783002867}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.1, y: -0.2, z: 0}
+  m_LocalPosition: {x: 0.99087435, y: 2.310271, z: -2.3297198}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AspirationTime: 0.15
   Catch: 0
-  Element: Ground
+  Element: Rock
 --- !u!54 &1910636644783002879
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _niveau: 0
+  Child: {fileID: 0}
 --- !u!114 &1910636644783002865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,9 +179,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 2
-  Arrival:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!195 &1910636644783002866
 NavMeshAgent:
   m_ObjectHideFlags: 0
