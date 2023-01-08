@@ -150,7 +150,10 @@ public class Poyoyoyo : MonoBehaviour
         _rb.AddForce(transform.up * -10, ForceMode.Impulse);
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> feat-incubateur
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.TryGetComponent(out Poyoyoyo comp) && _previousVelocity.y < 0)
