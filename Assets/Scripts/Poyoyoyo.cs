@@ -63,10 +63,6 @@ public class Poyoyoyo : MonoBehaviour
     void Update()
     {
         if (GameManager.Instance.InPause)
-            _agent.isStopped = true;
-        else if (_agent.isStopped)
-            _agent.isStopped = false;
-        if (GameManager.Instance.InPause)
             return;
         if (_grabed)
         {
